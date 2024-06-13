@@ -1,5 +1,6 @@
 package com.pay.membership.adpater.out.persistence;
 
+import com.pay.membership.application.port.out.FindMembershipPort;
 import com.pay.membership.application.port.out.RegisterMembershipPort;
 import com.pay.membership.common.WebAdapter;
 import com.pay.membership.domain.Membership;
@@ -10,7 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @WebAdapter
 @RequiredArgsConstructor
-public class MembershipPersistenceAdapter implements RegisterMembershipPort {
+public class MembershipPersistenceAdapter implements RegisterMembershipPort, FindMembershipPort {
 
 	private final MembershipRepository membershipRepository;
 
@@ -28,5 +29,11 @@ public class MembershipPersistenceAdapter implements RegisterMembershipPort {
 			.isCorp(membershipIsCorp.isMembershipCorp())
 			.isValid(membershipIsValid.isMembershipIsValid())
 			.build());
+	}
+
+	@Override
+	public MembershipJpaEntity findMembership(Membership.MembershipId membershipId) {
+		return membershipRepository.findById(Long.parseLong(membershipId.getMembershipId()))
+			.orElseThrow(() -> new IllegalArgumentException("membership not found by " + membershipId ));
 	}
 }
