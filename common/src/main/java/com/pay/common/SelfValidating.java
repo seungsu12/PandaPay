@@ -1,4 +1,4 @@
-package com.pay.membership.common;
+package com.pay.common;
 
 public abstract class SelfValidating<T> {
 
