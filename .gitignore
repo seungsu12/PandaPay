@@ -40,3 +40,7 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+### config file ###
+**.application-dev.yaml
+!/.idea/

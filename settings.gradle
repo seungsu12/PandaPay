@@ -1,2 +1,4 @@
 rootProject.name = 'PandaPay'
+include 'membership-service'
+include 'common'
 

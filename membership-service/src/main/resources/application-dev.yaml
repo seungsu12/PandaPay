@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    hikari:
+      username: root
+      password: Partridge!23
+    url: jdbc:mysql://34.64.121.73:3306/panda_pay?useSSL=false&serverTimezone=UTC
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+  config:
+    activate:
+      on-profile: dev
