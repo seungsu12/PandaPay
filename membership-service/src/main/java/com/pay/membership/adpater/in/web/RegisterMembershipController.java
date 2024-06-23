@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.pay.membership.application.port.in.RegisterMembershipCommand;
 import com.pay.membership.application.port.in.RegisterMembershipUseCase;
-import com.pay.membership.common.WebAdapter;
 import com.pay.membership.domain.Membership;
+import com.pay.common.WebAdapter;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

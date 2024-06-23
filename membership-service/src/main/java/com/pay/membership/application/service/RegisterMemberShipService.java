@@ -7,10 +7,9 @@ import com.pay.membership.adpater.out.persistence.MembershipMapper;
 import com.pay.membership.application.port.in.RegisterMembershipCommand;
 import com.pay.membership.application.port.in.RegisterMembershipUseCase;
 import com.pay.membership.application.port.out.RegisterMembershipPort;
-import com.pay.membership.common.UseCase;
 import com.pay.membership.domain.Membership;
+import com.pay.common.UseCase;
 
-import jakarta.validation.constraints.Size;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 

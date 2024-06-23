@@ -7,8 +7,8 @@ import com.pay.membership.adpater.out.persistence.MembershipMapper;
 import com.pay.membership.application.port.in.FindMembershipCommand;
 import com.pay.membership.application.port.in.FindMembershipUseCase;
 import com.pay.membership.application.port.out.FindMembershipPort;
-import com.pay.membership.common.UseCase;
 import com.pay.membership.domain.Membership;
+import com.pay.common.UseCase;
 
 import lombok.RequiredArgsConstructor;
 
